@@ -26,10 +26,8 @@ void main() {
   });
 
   test('getMobileNetworkCode', () async {
-    IosNetworkCode iosNetworkCodePlugin = IosNetworkCode();
     MockIosNetworkCodePlatform fakePlatform = MockIosNetworkCodePlatform();
     IosNetworkCodePlatform.instance = fakePlatform;
-
     expect(await IosNetworkCode.getMobileNetworkCode(), '42');
   });
 }

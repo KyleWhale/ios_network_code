@@ -1,0 +1,22 @@
+PODS:
+  - Flutter (1.0.0)
+  - ios_network_code (0.0.1):
+    - Flutter
+
+DEPENDENCIES:
+  - Flutter (from `Flutter`)
+  - ios_network_code (from `.symlinks/plugins/ios_network_code/ios`)
+
+EXTERNAL SOURCES:
+  Flutter:
+    :path: Flutter
+  ios_network_code:
+    :path: ".symlinks/plugins/ios_network_code/ios"
+
+SPEC CHECKSUMS:
+  Flutter: f04841e97a9d0b0a8025694d0796dd46242b2854
+  ios_network_code: 963b2c9e78b7c85df320de1ef680b91bfb4d7e34
+
+PODFILE CHECKSUM: 663715e941f9adb426e33bf9376914006f9ea95b
+
+COCOAPODS: 1.12.0

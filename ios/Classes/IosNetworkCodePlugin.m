@@ -1,4 +1,6 @@
 #import "IosNetworkCodePlugin.h"
+#import <CoreTelephony/CTTelephonyNetworkInfo.h>
+#import <CoreTelephony/CTCarrier.h>
 
 @implementation IosNetworkCodePlugin
 + (void)registerWithRegistrar:(NSObject<FlutterPluginRegistrar>*)registrar {

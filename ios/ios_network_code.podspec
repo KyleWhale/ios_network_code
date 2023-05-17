@@ -5,9 +5,9 @@
 Pod::Spec.new do |s|
   s.name             = 'ios_network_code'
   s.version          = '0.0.1'
-  s.summary          = 'A new Flutter plugin project.'
+  s.summary          = 'Obtain the network environment code of the phone.'
   s.description      = <<-DESC
-A new Flutter plugin project.
+Obtain the network environment code of the phone.
                        DESC
   s.homepage         = 'http://example.com'
   s.license          = { :file => '../LICENSE' }

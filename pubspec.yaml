@@ -1,7 +1,7 @@
 name: ios_network_code
-description: A new Flutter plugin project.
+description: Obtain the network environment code of the phone.
 version: 0.0.1
-homepage:
+homepage: https://github.com/KyleWhale/ios_network_code.git
 
 environment:
   sdk: '>=2.19.6 <3.0.0'

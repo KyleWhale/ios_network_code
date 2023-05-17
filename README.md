@@ -1,6 +1,6 @@
 # ios_network_code
 
-A new Flutter plugin project.
+Obtain the network environment code of the phone.
 
 ## Getting Started
 

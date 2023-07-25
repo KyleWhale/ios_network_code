@@ -1,3 +1,7 @@
 ## 0.0.1
 
 * Obtain the network environment code of the phone
+
+## 0.0.2
+
+* add LanguageCountryCode

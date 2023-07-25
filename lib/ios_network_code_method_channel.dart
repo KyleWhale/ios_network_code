@@ -26,4 +26,10 @@ class MethodChannelIosNetworkCode extends IosNetworkCodePlatform {
     final code = await methodChannel.invokeMethod<String>('getProxySettings');
     return code;
   }
+
+  @override
+  Future<String?> getLanguageCountryCode() async {
+    final code = await methodChannel.invokeMethod<String>('getLanguageCountryCode');
+    return code;
+  }
 }

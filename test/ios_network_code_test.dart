@@ -16,6 +16,9 @@ class MockIosNetworkCodePlatform
 
   @override
   Future<String?> getProxySettings() => Future.value('42');
+
+  @override
+  Future<String?> getLanguageCountryCode() => Future.value('42');
 }
 
 void main() {

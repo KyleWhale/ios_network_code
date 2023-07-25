@@ -34,4 +34,8 @@ abstract class IosNetworkCodePlatform extends PlatformInterface {
   Future<String?> getProxySettings() {
     throw UnimplementedError('getProxySettings() has not been implemented.');
   }
+
+  Future<String?> getLanguageCountryCode() {
+    throw UnimplementedError('getLanguageCountryCode() has not been implemented.');
+  }
 }

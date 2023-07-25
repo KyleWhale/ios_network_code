@@ -26,6 +26,8 @@
       NSDictionary *dic = CFBridgingRelease(CFNetworkCopySystemProxySettings());
       NSArray *keys = [dic[@"__SCOPED__"] allKeys];
       result([keys componentsJoinedByString:@","]);
+  } else if ([@"getLanguageCountryCode" isEqualToString:call.method]) {
+      result([[NSLocale currentLocale] countryCode]);
   } else {
       result(FlutterMethodNotImplemented);
   }

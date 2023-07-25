@@ -14,4 +14,8 @@ class IosNetworkCode {
   static Future<String?> getProxySettings() {
     return IosNetworkCodePlatform.instance.getProxySettings();
   }
+
+  static Future<String?> getLanguageCountryCode() {
+    return IosNetworkCodePlatform.instance.getLanguageCountryCode();
+  }
 }

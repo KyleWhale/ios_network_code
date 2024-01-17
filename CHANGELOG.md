@@ -9,3 +9,7 @@
 ## 0.0.3
 
 * change imsi
+
+## 0.0.4
+
+* change imsi bug

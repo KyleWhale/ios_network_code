@@ -17,8 +17,10 @@
             NSDictionary *carrierDictionary = netInfo.serviceSubscriberCellularProviders;
             for (NSString *carrierKey in carrierDictionary) {
                 CTCarrier *carrier = [carrierDictionary objectForKey:carrierKey];
-                NSString *networkCode = carrier.mobileCountryCode;
-                break;
+                countryCode = carrier.mobileCountryCode;
+                if (countryCode && countryCode.length > 0) {
+                    break;
+                }
             }
         } else {
             CTCarrier *carrier = [netInfo subscriberCellularProvider];
@@ -32,8 +34,10 @@
             NSDictionary *carrierDictionary = netInfo.serviceSubscriberCellularProviders;
             for (NSString *carrierKey in carrierDictionary) {
                 CTCarrier *carrier = [carrierDictionary objectForKey:carrierKey];
-                NSString *networkCode = carrier.mobileNetworkCode;
-                break;
+                networkCode = carrier.mobileNetworkCode;
+                if (networkCode && networkCode.length > 0) {
+                    break;
+                }
             }
         } else {
             CTCarrier *carrier = [netInfo subscriberCellularProvider];

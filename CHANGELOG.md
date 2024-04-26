@@ -17,3 +17,7 @@
 ## 0.0.5
 
 * add captured notify
+
+## 0.0.6
+
+* add get captured

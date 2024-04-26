@@ -81,6 +81,8 @@
         [IosNetworkCodePlugin shared].checkConnectCallback = result;
     } else if ([@"checkDisconnect" isEqualToString:call.method]) {
         [IosNetworkCodePlugin shared].checkDisconnectCallback = result;
+    } else if ([@"checkConnectState" isEqualToString:call.method]) {
+        result(@([UIScreen mainScreen].isCaptured));
     } else {
         result(FlutterMethodNotImplemented);
     }

@@ -1,6 +1,6 @@
 name: ios_network_code
 description: Obtain the network environment code of the phone.
-version: 0.0.5
+version: 0.0.6
 homepage: https://github.com/KyleWhale/ios_network_code.git
 
 environment:

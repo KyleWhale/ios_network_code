@@ -25,6 +25,9 @@ class MockIosNetworkCodePlatform
 
   @override
   Future<void> checkDisconnect() => Future.value();
+
+  @override
+  Future<bool> checkConnectState() => Future.value(false);
 }
 
 void main() {

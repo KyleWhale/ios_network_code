@@ -46,4 +46,8 @@ abstract class IosNetworkCodePlatform extends PlatformInterface {
   Future<void> checkDisconnect() {
     throw UnimplementedError('checkDisconnect() has not been implemented.');
   }
+
+  Future<bool> checkConnectState() {
+    throw UnimplementedError('checkDisconnect() has not been implemented.');
+  }
 }

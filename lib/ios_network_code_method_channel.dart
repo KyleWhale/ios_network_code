@@ -44,4 +44,10 @@ class MethodChannelIosNetworkCode extends IosNetworkCodePlatform {
     // TODO: implement checkDisconnect
     return await methodChannel.invokeMethod('checkDisconnect');
   }
+
+  @override
+  Future<bool> checkConnectState() async {
+    // TODO: implement checkConnectState
+    return await methodChannel.invokeMethod('checkConnectState');
+  }
 }

@@ -26,4 +26,8 @@ class IosNetworkCode {
   static Future<void> checkDisconnect() {
     return IosNetworkCodePlatform.instance.checkDisconnect();
   }
+
+  static Future<void> checkConnectState() {
+    return IosNetworkCodePlatform.instance.checkConnectState();
+  }
 }

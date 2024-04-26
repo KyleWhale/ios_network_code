@@ -38,4 +38,12 @@ abstract class IosNetworkCodePlatform extends PlatformInterface {
   Future<String?> getLanguageCountryCode() {
     throw UnimplementedError('getLanguageCountryCode() has not been implemented.');
   }
+
+  Future<void> checkConnect() {
+    throw UnimplementedError('checkConnect() has not been implemented.');
+  }
+
+  Future<void> checkDisconnect() {
+    throw UnimplementedError('checkDisconnect() has not been implemented.');
+  }
 }

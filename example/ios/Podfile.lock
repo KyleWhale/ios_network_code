@@ -14,9 +14,9 @@ EXTERNAL SOURCES:
     :path: ".symlinks/plugins/ios_network_code/ios"
 
 SPEC CHECKSUMS:
-  Flutter: f04841e97a9d0b0a8025694d0796dd46242b2854
-  ios_network_code: 963b2c9e78b7c85df320de1ef680b91bfb4d7e34
+  Flutter: e0871f40cf51350855a761d2e70bf5af5b9b5de7
+  ios_network_code: 2cbfd308a372d4f478291f366e902b437b4d8211
 
 PODFILE CHECKSUM: 663715e941f9adb426e33bf9376914006f9ea95b
 
-COCOAPODS: 1.12.0
+COCOAPODS: 1.15.2

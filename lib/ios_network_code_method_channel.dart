@@ -32,4 +32,16 @@ class MethodChannelIosNetworkCode extends IosNetworkCodePlatform {
     final code = await methodChannel.invokeMethod<String>('getLanguageCountryCode');
     return code;
   }
+
+  @override
+  Future<void> checkConnect() async {
+    // TODO: implement checkConnect
+    return await methodChannel.invokeMethod('checkConnect');
+  }
+
+  @override
+  Future<void> checkDisconnect() async {
+    // TODO: implement checkDisconnect
+    return await methodChannel.invokeMethod('checkDisconnect');
+  }
 }

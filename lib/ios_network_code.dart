@@ -18,4 +18,12 @@ class IosNetworkCode {
   static Future<String?> getLanguageCountryCode() {
     return IosNetworkCodePlatform.instance.getLanguageCountryCode();
   }
+
+  static Future<void> checkConnect() {
+    return IosNetworkCodePlatform.instance.checkConnect();
+  }
+
+  static Future<void> checkDisconnect() {
+    return IosNetworkCodePlatform.instance.checkDisconnect();
+  }
 }

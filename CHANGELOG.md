@@ -13,3 +13,7 @@
 ## 0.0.4
 
 * change imsi bug
+
+## 0.0.5
+
+* add captured notify

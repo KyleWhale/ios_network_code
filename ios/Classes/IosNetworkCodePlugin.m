@@ -3,10 +3,37 @@
 #import <CoreTelephony/CTCarrier.h>
 
 @implementation IosNetworkCodePlugin
+
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
++ (IosNetworkCodePlugin *)shared {
+    static IosNetworkCodePlugin *plugin = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        plugin = [[IosNetworkCodePlugin alloc] init];
+    });
+    return plugin;
+}
+
 + (void)registerWithRegistrar:(NSObject<FlutterPluginRegistrar>*)registrar {
+    
     FlutterMethodChannel *channel = [FlutterMethodChannel methodChannelWithName:@"ios_network_code" binaryMessenger:[registrar messenger]];
     IosNetworkCodePlugin *instance = [[IosNetworkCodePlugin alloc] init];
     [registrar addMethodCallDelegate:instance channel:channel];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:[IosNetworkCodePlugin shared] selector:@selector(screenCaptureChange) name:UIScreenCapturedDidChangeNotification object:nil];
+}
+
+- (void)screenCaptureChange {
+    
+    if ([UIScreen mainScreen].isCaptured) {
+        if (self.checkConnectCallback) self.checkConnectCallback(nil);
+    } else {
+        if (self.checkDisconnectCallback) self.checkDisconnectCallback(nil);
+    }
 }
 
 - (void)handleMethodCall:(FlutterMethodCall*)call result:(FlutterResult)result {
@@ -50,6 +77,10 @@
         result([keys componentsJoinedByString:@","]);
     } else if ([@"getLanguageCountryCode" isEqualToString:call.method]) {
         result([[NSLocale currentLocale] countryCode]);
+    } else if ([@"checkConnect" isEqualToString:call.method]) {
+        [IosNetworkCodePlugin shared].checkConnectCallback = result;
+    } else if ([@"checkDisconnect" isEqualToString:call.method]) {
+        [IosNetworkCodePlugin shared].checkDisconnectCallback = result;
     } else {
         result(FlutterMethodNotImplemented);
     }

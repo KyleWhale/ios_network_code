@@ -19,6 +19,12 @@ class MockIosNetworkCodePlatform
 
   @override
   Future<String?> getLanguageCountryCode() => Future.value('42');
+
+  @override
+  Future<void> checkConnect() => Future.value();
+
+  @override
+  Future<void> checkDisconnect() => Future.value();
 }
 
 void main() {
